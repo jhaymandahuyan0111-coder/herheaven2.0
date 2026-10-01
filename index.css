@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-wild-rice: #ECE48F;
+  --color-tulip-tree: #E7B12E;
+  --color-tangerine: #E19B02;
+  --color-golden-bell: #E17D12;
+  --color-rose-of-sharon: #BA5304;
+  --color-peru-tan: #892E00;
+  --color-cream: #FFFDF0;
+  --color-dark-brown: #3D1400;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #FFFDF0;
+  color: #3D1400;
+  margin: 0;
+}
+
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; margin: 0; }
+p { margin: 0; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #FFF8E0; }
+::-webkit-scrollbar-thumb { background: #E7B12E; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #E17D12; }
+
+.hs-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #E7B12E;
+  border-radius: 8px;
+  background: white;
+  color: #3D1400;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s;
+  outline: none;
+}
+.hs-input:focus { border-color: #E17D12; box-shadow: 0 0 0 3px rgba(225,125,18,0.15); }
+.hs-input::placeholder { color: #B89070; }
+
+.hs-btn-primary {
+  background: #E17D12;
+  color: white;
+  padding: 11px 28px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s;
+}
+.hs-btn-primary:hover { background: #BA5304; transform: translateY(-1px); }
+.hs-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.hs-btn-outline {
+  background: transparent;
+  color: #E17D12;
+  padding: 11px 28px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid #E17D12;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s;
+}
+.hs-btn-outline:hover { background: #E17D12; color: white; }
+
+.hs-btn-danger {
+  background: #DC2626;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s;
+}
+.hs-btn-danger:hover { background: #B91C1C; }
+
+.hs-btn-sm {
+  background: #E17D12;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s;
+}
+.hs-btn-sm:hover { background: #BA5304; }
+
+.hs-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(231,177,46,0.25);
+  box-shadow: 0 2px 12px rgba(137,46,0,0.07);
+}
+
+.hs-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.hs-table th {
+  background: rgba(231,177,46,0.15);
+  padding: 11px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #5C1A00;
+  font-family: 'Outfit', sans-serif;
+  border-bottom: 2px solid rgba(231,177,46,0.3);
+}
+.hs-table td { padding: 11px 14px; border-bottom: 1px solid rgba(231,177,46,0.12); color: #3D1400; }
+.hs-table tr:hover td { background: rgba(236,228,143,0.12); }
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+.badge-green { background: #D1FAE5; color: #065F46; }
+.badge-red { background: #FEE2E2; color: #991B1B; }
+.badge-yellow { background: #FEF3C7; color: #92400E; }
+.badge-orange { background: #FFEDD5; color: #9A3412; }
+.badge-blue { background: #DBEAFE; color: #1E40AF; }
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.18s;
+  color: rgba(236,228,143,0.8);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Outfit', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sidebar-item:hover { background: rgba(236,228,143,0.12); color: #ECE48F; }
+.sidebar-item.active { background: #E17D12; color: white; }
+
+.label { display: block; font-size: 13px; font-weight: 600; color: #5C1A00; margin-bottom: 6px; }
+
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; padding: 20px;
+}
+.modal-box {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
